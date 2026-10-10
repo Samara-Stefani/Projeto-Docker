@@ -11,6 +11,12 @@ jobs:
     steps:
       - name: Checkout código
         uses: actions/checkout@v4
+      
+      - name: Subir Ambiente de Teste
+        run: docker compose up -d
+
+      - name: Validar Comunicação (Ping)
+        run: docker compose exec -T calculadora-app ping -c 1 servico-vizinho
 
       - name: Login no Docker Hub
         uses: docker/login-action@v3
@@ -37,3 +43,4 @@ jobs:
 
       - name: Rodar testes dentro do Container
         run: docker run ${{ secrets.DOCKER_USER }}/my-project-cicd:latest pytest
+

@@ -1,7 +1,9 @@
 services:
 
-  calculadora:
+  calculadora-app:
     build: .
     image: samarastefani/my-project-cicd
 
-  
+  servico-vizinho:
+    image: alpine
+    command: sleep infinity
