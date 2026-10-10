@@ -1,0 +1,7 @@
+services:
+
+  calculadora:
+    build: .
+    image: samarastefani/my-project-cicd
+
+  
