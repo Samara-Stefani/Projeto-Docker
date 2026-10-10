@@ -1,8 +1,5 @@
-        
-import time
+def somar(a, b):
+    return a + b
 
 if __name__ == "__main__":
-    print("Calculadora iniciada com sucesso!", flush=True)
-
-    while True:
-        time.sleep(60)
+    print("Aplicação a rodar com sucesso!")
