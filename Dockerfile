@@ -1,5 +1,5 @@
 FROM python:3.12-slim
-
+#comentarios...
 WORKDIR /app
 
 # Cria o usuário não-root primeiro e ajusta a pasta de trabalho
